@@ -7,9 +7,9 @@ import pygsheets
 # Set Broadcom mode so we can address GPIO pins by number.
 GPIO.setmode(GPIO.BCM)
 
-# Initially we don't know if the door sensor is open or closed...
+# Initialise vars
 isOpen = None
-oldIsOpen = None
+previouslyOpen = None
 
 # Set up the door sensor pin.
 DOOR_SENSOR_PIN = 18
